@@ -4,11 +4,11 @@
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
-    nodejs_22 # Node.js (v22+ for Array.fromAsync support)
+    nodejs # Node.js
     pnpm # pnPm
-    just # Just
     pre-commit # Pre-commit
     nixfmt # Nix formatter
+    just # Just
   ];
 
   # Shell hook to set up environment

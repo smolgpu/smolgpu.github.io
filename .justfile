@@ -16,6 +16,7 @@ default:
 install:
   @echo "Installing..."
   @pnpm install
+  @pre-commit install --install-hooks
 
 update:
   @echo "Updating..."
