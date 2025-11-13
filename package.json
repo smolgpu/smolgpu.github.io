@@ -1,0 +1,36 @@
+{
+  "name": "smolgpu.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "start:dev": "astro dev --host",
+    "start": "astro dev --host",
+    "build": "astro check && astro build && jampack ./dist",
+    "preview": "astro preview --host",
+    "sync": "astro sync",
+    "astro": "astro",
+    "lint": "prettier . --check && eslint --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier . --write --ignore-path .gitignore",
+    "taze": "pnpm dlx taze@18 major -I",
+    "taze:minor": "pnpm dlx taze@18 minor -w",
+    "test": "pnpm format && pnpm lint"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Miguel Villa Floran",
+    "url": "https://github.com/kaweees"
+  },
+  "license": "ISC",
+  "packageManager": "pnpm@10.22.0",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.7.1"
+  }
+}
